@@ -39,19 +39,22 @@ if ($result && $result->num_rows > 0) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
     <a href="index.php"> &larr; Torna ai Dipartimenti</a>
     <?php foreach($departments as $department) { ?>
         <h3><?php echo $department->name; ?></h3>
-        <p><b>Capo del Dipartimento:</b> <?php echo $department->head_of_department; ?></p>
-        <h4>Contatti:</h4>
-        <ul>
-            <?php foreach($department->getContactsAsArray() as $key => $value) { ?>
-                <li><small><?php echo "$key: $value"; ?></small></li> 
-            <?php } ?>
-        </ul>
+        <div class="container">
+            <p><b>Capo del Dipartimento:</b> <?php echo $department->head_of_department; ?></p>
+            <h4>Contatti:</h4>
+            <ul>
+                <?php foreach($department->getContactsAsArray() as $key => $value) { ?>
+                    <li class="contact"><small><?php echo "$key: $value"; ?></small></li> 
+                <?php } ?>
+            </ul>
+        </div>
     <?php }?>
 </body>
 </html>

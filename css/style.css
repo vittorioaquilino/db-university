@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    font-size: .8rem;
+}
+
+h2, h3 {
+  margin: 1rem;
+  text-align: center;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+a:hover {
+  color: blue;
+}
+
+li {
+  margin: 0.4rem 0;
+}
+
+.contact {
+    list-style: inside;
+}

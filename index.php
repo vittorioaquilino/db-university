@@ -32,17 +32,22 @@ if ($result && $result->num_rows > 0) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
     <h2>Lista Dipartimenti:</h2>
-    <ul>
-        <?php foreach($departments as $department) { ?>
-        <li><b><?php echo $department->name; ?></b></li>
-        <li>
-            <a href="single-department.php?id=<?php echo $department->id; ?>">Visualizza dettagli</a>
-        </li>
-        <?php } ?>
-    </ul>
+    <div class="container">
+        <div class="card">
+            <ul>
+                <?php foreach($departments as $department) { ?>
+                <li><b><?php echo $department->name; ?></b></li>
+                <li>
+                    <a href="single-department.php?id=<?php echo $department->id; ?>">Visualizza dettagli</a>
+                </li>
+                <?php } ?>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
